@@ -15,23 +15,31 @@ body {
   background-color: azure;
 }
 
-.character-display {
-  height: 25px;
-  font-size: 1em;
+.characterdisplay {
+  height: 30px;
+  font-size: 1.5em;
   color: white;
   font-family: inherit;
   background-color: #434444;
-  padding: 2px;
+  margin-bottom: none;
   font-weight: 700;
   font-family: inherit;
+  box-sizing: border-box;
+  vertical-align: middle;
 }
 
-.result-display {
-  height: 70px;
+.resultdisplay {
+  height: 65px;
   background-color: #434444;
   font-size: 3em;
   font-weight: 700;
+  margin-top: none;
   font-family: inherit;
+  color: white;
+  display: flex;
+  justify-content: right;
+  padding: 2%;
+  align-items: center;
 }
 .calc-container {
   border: 7px solid rgba(47,47,47,1);

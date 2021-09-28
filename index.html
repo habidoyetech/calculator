@@ -6,43 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CALCULATOR</title>
   <link rel="stylesheet" href="styles\main.css">
-  
+  <script src="scripts\main.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="calculator">
     <div class="calc-container">
       <div id="display">
-        <div class="character-display"></div>
-        <div class="result-display"></div>
+        <div class="characterdisplay"></div>
+        <div class="resultdisplay"></div>
       </div>
       <div class="character">
         <div class="group first">
           <button type="button" class="clear" value="clear">AC</button>
           <button type="button" class="sign" value="sign">+/-</button>
           <button type="button" class="percent" value="percentage">%</button>
-          <button type="button" class="operator division" value="divide">/</button>
+          <button type="button" id="divi" class="operator division" value="divide">/</button>
         </div>
         <div class="group second">
           <button type="button" class="operand seven" value="7">7</button>
           <button type="button" class="operand eight" value="8">8</button>
-          <button type="button" class="operand nine" value="9">9</button>
-          <button type="button" class="operator multiply" value="multiply">*</button>
+          <button type="button" id="nine" class="operand nine" value="9">9</button>
+          <button type="button" id="mul" class="operator multiply" value="multiply">*</button>
         </div>
         <div class="group third">
-          <button type="button" class="operand four" value="4">4</button>
-          <button type="button" class="operand five" value="5">5</button>
-          <button type="button" class="operand six" value="6">6</button>
-          <button type="button" class="operator subtraction" value="subtract">-</button>
+          <button type="button" id="four" class="operand four" value="4">4</button>
+          <button type="button" id="five" class="operand five" value="5">5</button>
+          <button type="button" id="six" class="operand six" value="6">6</button>
+          <button type="button" id="sub" class="operator subtraction" value="subtract">-</button>
         </div>
         <div class="group fourth">
-          <button type="button" class="operand one" value="1">1</button>
-          <button type="button" class="operand two" value="2">2</button>
-          <button type="button" class="operand three" value="3">3</button>
-          <button type="button" class="operator addition" value="add">+</button>
+          <button type="button" id="one" class="operand one" value="1">1</button>
+          <button type="button" id="two" class="operand two" value="2">2</button>
+          <button type="button" id="three" class="operand three" value="3">3</button>
+          <button type="button" id="add" class="operator addition" value="add">+</button>
         </div>
         <div class="group fifth">
-          <button type="button" class="operand zero" value="0">0</button>
+          <button type="button" id="zero" class="operand zero" value="0">0</button>
           <button type="button" class="operand dot" value="dot">.</button>
           <button type="button" class="operator equalto" value="equalto">=</button>
           
