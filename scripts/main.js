@@ -91,16 +91,14 @@ const btnmul = document.getElementById('mul');
 btnmul.addEventListener('click', mul)
 
 function mul () {
-  if (disChar.innerHTML !== ' ' && disResult.textContent !== ' ') {
+  if (disResult.textContent !== ' ') {
     let newCalc = disResult.textContent;
-    disChar.textContent = ' ';
+    disChar.innerHTML = ' ';
     disChar.innerHTML += newCalc + operator[2];
     disResult.textContent = ' ';
     
   }else {
     disChar.innerHTML += operator[2];
-    return operator[2];
-
   }
   
 }
@@ -109,33 +107,62 @@ const btnadd = document.getElementById('add');
 btnadd.addEventListener('click', add);
 
 function add () {
-  disChar.innerHTML += operator[0];
-  return operator[0];
+  if (disResult.textContent !== ' ') {
+    let newCalc = disResult.textContent;
+    disChar.innerHTML = ' ';
+    disChar.innerHTML += newCalc + operator[0];
+    disResult.textContent = ' ';
+    
+  }else {
+    disChar.innerHTML += operator[0];
+  }
+  // disChar.innerHTML += operator[0];
+  // return operator[0];
 }
 
 const btnsub = document.getElementById('sub');
 btnsub.addEventListener('click', sub);
 
 function sub () {
-  disChar.innerHTML += operator[3];
-  return operator[3];
+  if (disResult.textContent !== ' ') {
+    const newCalc = disResult.textContent;
+    // disChar.innerHTML = ' ';
+    disChar.textContent = newCalc + operator[3];
+    disResult.textContent = ' ';
+    
+  }else {
+    disChar.innerHTML += operator[3];
+  }
+  // disChar.innerHTML += operator[3];
+  // return operator[3];
 }
 
 const btndivi = document.getElementById('divi');
 btndivi.addEventListener('click', divi);
 
 function divi () {
-  disChar.innerHTML += operator[1];
-  return operator[1];
+  if (disResult.textContent !== ' ') {
+    let newCalc = disResult.textContent;
+    disChar.innerHTML = ' ';
+    disChar.innerHTML += newCalc + operator[1];
+    disResult.textContent = ' ';
+    
+  }else {
+    disChar.innerHTML += operator[1];
+  }
+  // disChar.innerHTML += operator[1];
+  // return operator[1];
 }
 
 const btnequal = document.querySelector('.equalto');
 btnequal.addEventListener('click', equalto)
 function equalto() {
-  let me = disChar.innerHTML.toString();
-  let newme = eval(me)
-  disResult.innerHTML = newme;
-  console.log(newme)
+  let myResult = disChar.innerHTML.toString();
+  let newResult = eval(myResult);
+  let myNewResult = parseFloat(newResult.toFixed(4))
+  disResult.innerHTML = myNewResult;
+  console.log(myNewResult)
+  
 }
 
 const btndot = document.querySelector('.dot');
@@ -149,4 +176,14 @@ const btnClear = document.querySelector('.clear')
 btnClear.addEventListener('click', function() {
   disChar.innerHTML = ' ';
   disResult.textContent = ' ';
-})
+});
+
+const btnpercent = document.getElementById('percent')
+btnpercent.addEventListener('click', percent)
+
+function percent() {
+  const perNum = disChar.innerHTML;
+  const resultperNum = perNum/100;
+  disResult.textContent = resultperNum;
+  console.log(resultperNum);
+}
