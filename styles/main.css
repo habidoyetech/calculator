@@ -17,7 +17,7 @@ body {
 
 .characterdisplay {
   height: 35px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: white;
   font-family: inherit;
   background-color: #434444;
@@ -56,6 +56,10 @@ body {
   border-bottom: 7px solid rgba(47,47,47,1);
 }
 
+.character {
+  background-color:rgb(44, 43, 43);
+}
+
 button {
   width: 125px;
   height: 83px;
@@ -81,6 +85,6 @@ button {
   background-color: orange;
 }
 
-.zero {
-  flex: 2;
+#delete {
+  background-color: rgb(201, 179, 139);
 }

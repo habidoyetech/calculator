@@ -1,6 +1,6 @@
 const num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-const disChar = document.querySelector('.characterdisplay');
+let disChar = document.querySelector('.characterdisplay');
 
 const disResult = document.querySelector('.resultdisplay');
 
@@ -107,14 +107,18 @@ const btnadd = document.getElementById('add');
 btnadd.addEventListener('click', add);
 
 function add () {
-  if (disResult.textContent !== ' ') {
+  if (disResult.textContent === ' ') {
+    disChar.innerHTML += operator [0];
+    // let newCalc = disResult.textContent;
+    // disChar.innerHTML = ' ';
+    // disChar.innerHTML += newCalc + operator[0];
+    // disResult.textContent = ' ';
+  } else {
+    // disChar.innerHTML += operator[0];
     let newCalc = disResult.textContent;
     disChar.innerHTML = ' ';
     disChar.innerHTML += newCalc + operator[0];
     disResult.textContent = ' ';
-    
-  }else {
-    disChar.innerHTML += operator[0];
   }
   // disChar.innerHTML += operator[0];
   // return operator[0];
@@ -127,7 +131,7 @@ function sub () {
   if (disResult.textContent !== ' ') {
     const newCalc = disResult.textContent;
     // disChar.innerHTML = ' ';
-    disChar.textContent = newCalc + operator[3];
+    disChar.innerHTML = newCalc + operator[3];
     disResult.textContent = ' ';
     
   }else {
@@ -184,6 +188,34 @@ btnpercent.addEventListener('click', percent)
 function percent() {
   const perNum = disChar.innerHTML;
   const resultperNum = perNum/100;
-  disResult.textContent = resultperNum;
+  if (disResult.textContent !== ' '){
+
+  } disResult.textContent = resultperNum;
   console.log(resultperNum);
+};
+
+const btnneg = document.getElementById('sign')
+btnneg.addEventListener('click', negate)
+
+function negate() {
+  let numNeg = disChar.innerHTML.toString();
+  if (numNeg.indexOf('-') === -1){
+    disChar.innerHTML = ' ';
+    disChar.textContent += operator[3] + numNeg
+    
+  }else if(numNeg.indexOf('-') !== -1) {
+    disChar.innerHTML = ' ';
+    disChar.innerHTML = numNeg.slice(1);
+    
+  }
+}
+
+const btndel = document.getElementById('delete')
+btndel.addEventListener('click', del)
+
+function del () {
+  const delNum = disChar.innerHTML;
+  resultDel = delNum.slice(0, -1);
+  disChar.innerHTML = ' ';
+  disChar.innerHTML += resultDel;
 }
