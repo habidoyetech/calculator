@@ -71,6 +71,7 @@ button {
   border-radius: 8px;
   font-family: inherit;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .group {
@@ -81,8 +82,14 @@ button {
   background-color: dodgerblue ;
 }
 
+
+
 .operator {
   background-color: orange;
+}
+
+.operator:hover {
+  background-color: rgb(241, 210, 153);
 }
 
 #delete {

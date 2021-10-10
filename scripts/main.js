@@ -173,6 +173,7 @@ const btndot = document.querySelector('.dot');
 btndot.addEventListener('click', dot)
 
 function dot() {
+  
   disChar.innerHTML += operator[4];
 }
 
@@ -186,12 +187,21 @@ const btnpercent = document.getElementById('percent')
 btnpercent.addEventListener('click', percent)
 
 function percent() {
+  
+  // if (disResult.textContent !== ' ')  {
+  //   disChar.innerHTML = ' ';
+  //   const ifperNum = disResult.textContent;
+  //   let intifperNum = parseInt(ifperNum)
+  //   disResult.textContent = ' ';
+  //   disResult.innerHTML = intifperNum/100;
+  //   return
+  // }
   const perNum = disChar.innerHTML;
-  const resultperNum = perNum/100;
-  if (disResult.textContent !== ' '){
-
-  } disResult.textContent = resultperNum;
-  console.log(resultperNum);
+  const intPerNum = parseInt(perNum);
+  let resultperNum = intPerNum/100;
+  
+  disResult.textContent = resultperNum;
+  
 };
 
 const btnneg = document.getElementById('sign')
@@ -199,14 +209,24 @@ btnneg.addEventListener('click', negate)
 
 function negate() {
   let numNeg = disChar.innerHTML.toString();
+  // const checknumNeg = numNeg.substr(0, 2)
+  // if (checknumNeg.indexOf('-') === 1) {
+  //   disChar.innerHTML = numNeg.slice(1);
+  //   return
+  // }
+  // else {
+  //   disChar.innerHTML = ' ';
+  //   disChar.textContent += operator[3] + numNeg
+
+  // }
   if (numNeg.indexOf('-') === -1){
     disChar.innerHTML = ' ';
     disChar.textContent += operator[3] + numNeg
-    
+    return
   }else if(numNeg.indexOf('-') !== -1) {
     disChar.innerHTML = ' ';
     disChar.innerHTML = numNeg.slice(1);
-    
+    return
   }
 }
 
