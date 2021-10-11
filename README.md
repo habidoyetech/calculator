@@ -1,7 +1,7 @@
 ## CALCULATOR
 > A calculator project built to understand  Javascript.
 
-![Screenshot loading...](assets\screenshot.png)
+<img src="assets\screenshot.png">
 
 ## Built With
 
@@ -41,7 +41,7 @@ Click on the live demo link and peruse the app.
 ### Making Changes
 
 - `npm install` to install the dependencies and packages
-- `npm start` to test the app after changes were made
+- `To start` the project after changes have been made, click to Go Live from the status bar to turn the server on/off or Right click on a HTML file from Explorer Window and click on `Open with Live Server`. 
 
 ## Author
 
