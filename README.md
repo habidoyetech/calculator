@@ -10,7 +10,7 @@
 - HTML
 
 ## Live Demo
-<a href="https://rawcdn.githack.com/Habidoye97/calculator/857d23beefe1844793574fdeddea71aba78201d2/index.html" target="_blank">Calculator</a>
+<a href="https://raw.githack.com/Habidoye97/calculator/development/index.html" target="_blank">Calculator</a>
 
 ## Getting Started
 
