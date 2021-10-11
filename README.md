@@ -1,7 +1,7 @@
 ## CALCULATOR
 > A calculator project built to understand  Javascript.
 
-<img src="assets\screenshot.png">
+<img src="assets\screenshot3.png">
 
 ## Built With
 

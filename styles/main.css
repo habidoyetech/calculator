@@ -13,14 +13,14 @@ body {
   height: 100vh;
   width: 100%;
   background-color: azure;
+  flex-direction: column;
 }
 
 .characterdisplay {
   height: 35px;
   font-size: 1.3em;
-  color: white;
+  color: black;
   font-family: inherit;
-  background-color: #434444;
   margin-bottom: none;
   font-weight: 700;
   font-family: inherit;
@@ -34,44 +34,51 @@ body {
 
 .resultdisplay {
   height: 50px;
-  background-color: #434444;
   font-size: 3em;
   font-weight: 700;
   margin-top: none;
   font-family: inherit;
-  color: white;
+  color: black;
   display: flex;
   justify-content: right;
   padding: 1%;
   align-items: center;
 }
 .calc-container {
-  border: 7px solid rgba(47,47,47,1);
+  border: 2px solid rgba(47,47,47,1);
   overflow-x: hidden;
-  width: 500px;
+  max-width: 500px;
+  background-color: rgb(170, 170, 170);
+  margin-bottom: -10px;
 }
 
 #display {
   overflow: hidden;
-  border-bottom: 7px solid rgba(47,47,47,1);
+  margin: 15px;
+  border: 2px solid rgba(47,47,47,1);
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
 }
 
 .character {
-  background-color:rgb(44, 43, 43);
+  background-color: inherit;
+  margin: 10px;
 }
 
 button {
-  width: 125px;
+  width: 100px;
   height: 83px;
   color: black;
   font-weight: 700;
-  font-size: 1.5em;
-  margin: 1px;
+  font-size: 1.8em;
+  margin: 5px;
   border: none;
   border-radius: 8px;
   font-family: inherit;
   box-sizing: border-box;
   cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid rgba(47,47,47,1);
 }
 
 .group {
@@ -82,7 +89,9 @@ button {
   background-color: dodgerblue ;
 }
 
-
+.operand:hover {
+  background-color: rgb(170, 170, 170);
+}
 
 .operator {
   background-color: orange;
@@ -93,5 +102,23 @@ button {
 }
 
 #delete {
-  background-color: rgb(201, 179, 139);
+  background-color: rgb(170, 170, 255);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  margin-bottom: -10px;
+}
+
+.fa-github  {
+  color: black;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }
