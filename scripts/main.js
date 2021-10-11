@@ -132,10 +132,10 @@ function sub () {
   }
 }
 
-const btndivi = document.getElementById('divi');
-btndivi.addEventListener('click', divi);
+const btndivision = document.getElementById('divi');
+btndivision.addEventListener('click', division);
 
-function divi () {
+function division () {
   if (disResult.textContent !== ' ') {
     let newCalc = disResult.textContent;
     disChar.innerHTML = ' ';
