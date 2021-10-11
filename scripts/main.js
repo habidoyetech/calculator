@@ -109,19 +109,13 @@ btnadd.addEventListener('click', add);
 function add () {
   if (disResult.textContent === ' ') {
     disChar.innerHTML += operator [0];
-    // let newCalc = disResult.textContent;
-    // disChar.innerHTML = ' ';
-    // disChar.innerHTML += newCalc + operator[0];
-    // disResult.textContent = ' ';
   } else {
-    // disChar.innerHTML += operator[0];
     let newCalc = disResult.textContent;
     disChar.innerHTML = ' ';
     disChar.innerHTML += newCalc + operator[0];
     disResult.textContent = ' ';
   }
-  // disChar.innerHTML += operator[0];
-  // return operator[0];
+  
 }
 
 const btnsub = document.getElementById('sub');
@@ -130,15 +124,12 @@ btnsub.addEventListener('click', sub);
 function sub () {
   if (disResult.textContent !== ' ') {
     const newCalc = disResult.textContent;
-    // disChar.innerHTML = ' ';
     disChar.innerHTML = newCalc + operator[3];
     disResult.textContent = ' ';
     
   }else {
     disChar.innerHTML += operator[3];
   }
-  // disChar.innerHTML += operator[3];
-  // return operator[3];
 }
 
 const btndivi = document.getElementById('divi');
@@ -154,9 +145,7 @@ function divi () {
   }else {
     disChar.innerHTML += operator[1];
   }
-  // disChar.innerHTML += operator[1];
-  // return operator[1];
-}
+};
 
 const btnequal = document.querySelector('.equalto');
 btnequal.addEventListener('click', equalto)
@@ -187,15 +176,6 @@ const btnpercent = document.getElementById('percent')
 btnpercent.addEventListener('click', percent)
 
 function percent() {
-  
-  // if (disResult.textContent !== ' ')  {
-  //   disChar.innerHTML = ' ';
-  //   const ifperNum = disResult.textContent;
-  //   let intifperNum = parseInt(ifperNum)
-  //   disResult.textContent = ' ';
-  //   disResult.innerHTML = intifperNum/100;
-  //   return
-  // }
   const perNum = disChar.innerHTML;
   const intPerNum = parseInt(perNum);
   let resultperNum = intPerNum/100;
@@ -209,16 +189,7 @@ btnneg.addEventListener('click', negate)
 
 function negate() {
   let numNeg = disChar.innerHTML.toString();
-  // const checknumNeg = numNeg.substr(0, 2)
-  // if (checknumNeg.indexOf('-') === 1) {
-  //   disChar.innerHTML = numNeg.slice(1);
-  //   return
-  // }
-  // else {
-  //   disChar.innerHTML = ' ';
-  //   disChar.textContent += operator[3] + numNeg
-
-  // }
+  
   if (numNeg.indexOf('-') === -1){
     disChar.innerHTML = ' ';
     disChar.textContent += operator[3] + numNeg
