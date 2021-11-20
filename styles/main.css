@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  border: 0;
+  font-family: 'Gemunu Libre', sans-serif;
+  box-sizing: border-box;
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: azure;
+  flex-direction: column;
+}
+
+.characterdisplay {
+  height: 35px;
+  font-size: 1.3em;
+  color: black;
+  font-family: inherit;
+  margin-bottom: none;
+  font-weight: 700;
+  font-family: inherit;
+  box-sizing: border-box;
+  vertical-align: middle;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  padding: 1%;
+}
+
+.resultdisplay {
+  height: 50px;
+  font-size: 3em;
+  font-weight: 700;
+  margin-top: none;
+  font-family: inherit;
+  color: black;
+  display: flex;
+  justify-content: right;
+  padding: 1%;
+  align-items: center;
+}
+.calc-container {
+  border: 2px solid rgba(47,47,47,1);
+  overflow-x: hidden;
+  max-width: 500px;
+  background-color: rgb(170, 170, 170);
+  margin-bottom: -10px;
+}
+
+#display {
+  overflow: hidden;
+  margin: 15px;
+  border: 2px solid rgba(47,47,47,1);
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+}
+
+.character {
+  background-color: inherit;
+  margin: 10px;
+}
+
+button {
+  width: 100px;
+  height: 83px;
+  color: black;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid rgba(47,47,47,1);
+}
+
+.group {
+  display: flex;
+}
+
+.clear, .sign, .percent {
+  background-color: dodgerblue ;
+}
+
+.operand:hover {
+  background-color: rgb(170, 170, 170);
+}
+
+.operator {
+  background-color: orange;
+}
+
+.operator:hover {
+  background-color: rgb(241, 210, 153);
+}
+
+#delete {
+  background-color: rgb(170, 170, 255);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  margin-bottom: -10px;
+}
+
+.fa-github  {
+  color: black;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
