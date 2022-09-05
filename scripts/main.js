@@ -4,86 +4,96 @@ const disChar = document.querySelector('.characterdisplay');
 
 const disResult = document.querySelector('.resultdisplay');
 
-const btnseven = document.querySelector('.seven');
-btnseven.addEventListener('click', seven);
+// const btnseven = document.querySelector('.seven');
+// btnseven.addEventListener('click', seven);
 
-function seven() {
-  disChar.innerHTML += num[7];
-  return num[7];
+// function seven() {
+//   disChar.innerHTML += num[7];
+//   return num[7];
+// }
+
+// const btneight = document.querySelector('.eight');
+// btneight.addEventListener('click', eight)
+
+// function eight() {
+//   disChar.innerHTML += num[8]
+//   return num[8];
+// }
+
+// const btnnine = document.getElementById('nine');
+// btnnine.addEventListener('click', nine);
+
+// function nine() {
+//   disChar.innerHTML += num[9];
+//   return num[9];
+// }
+
+// const btnfour = document.getElementById('four');
+// btnfour.addEventListener('click', four);
+
+// function four() {
+//   disChar.innerHTML += num[4];
+//   return num[4];
+// }
+
+// const btnfive = document.getElementById('five');
+// btnfive.addEventListener('click', five);
+
+// function five() {
+//   disChar.innerHTML += num[5];
+//   return num[5];
+// }
+
+// const btnsix = document.getElementById('six');
+// btnsix.addEventListener('click', six);
+
+// function six() {
+//   disChar.innerHTML += num[6];
+//   return num[6];
+// }
+
+// const btnone = document.getElementById('one');
+// btnone.addEventListener('click', one);
+
+// function one() {
+//   disChar.innerHTML += num[1];
+//   return num[1];
+// }
+
+// const btntwo = document.getElementById('two');
+// btntwo.addEventListener('click', two);
+
+// function two() {
+//   disChar.innerHTML += num[2];
+//   return num[2];
+// }
+
+// const btnthree = document.getElementById('three');
+// btnthree.addEventListener('click', three);
+
+// function three() {
+//   disChar.innerHTML += num[3];
+//   return num[3];
+//   console.log(num[3])
+// }
+
+// const btnzero = document.getElementById('zero');
+// btnzero.addEventListener('click', zero);
+
+// function zero() {
+//   disChar.innerHTML += num[0];
+//   return num[0];
+// }
+
+const allNumberButton = document.getElementsByClassName('operand')
+for (i=0; i<allNumberButton.length; i++) {
+  allNumberButton[i].addEventListener('click', (e)=>{
+    disChar.innerHTML += e.target.value
+    return e.target.value
+  })
 }
 
-const btneight = document.querySelector('.eight');
-btneight.addEventListener('click', eight)
-
-function eight() {
-  disChar.innerHTML += num[8]
-  return num[8];
-}
-
-const btnnine = document.getElementById('nine');
-btnnine.addEventListener('click', nine);
-
-function nine() {
-  disChar.innerHTML += num[9];
-  return num[9];
-}
-
-const btnfour = document.getElementById('four');
-btnfour.addEventListener('click', four);
-
-function four() {
-  disChar.innerHTML += num[4];
-  return num[4];
-}
-
-const btnfive = document.getElementById('five');
-btnfive.addEventListener('click', five);
-
-function five() {
-  disChar.innerHTML += num[5];
-  return num[5];
-}
-
-const btnsix = document.getElementById('six');
-btnsix.addEventListener('click', six);
-
-function six() {
-  disChar.innerHTML += num[6];
-  return num[6];
-}
-
-const btnone = document.getElementById('one');
-btnone.addEventListener('click', one);
-
-function one() {
-  disChar.innerHTML += num[1];
-  return num[1];
-}
-
-const btntwo = document.getElementById('two');
-btntwo.addEventListener('click', two);
-
-function two() {
-  disChar.innerHTML += num[2];
-  return num[2];
-}
-
-const btnthree = document.getElementById('three');
-btnthree.addEventListener('click', three);
-
-function three() {
-  disChar.innerHTML += num[3];
-  return num[3];
-  console.log(num[3])
-}
-
-const btnzero = document.getElementById('zero');
-btnzero.addEventListener('click', zero);
-
-function zero() {
-  disChar.innerHTML += num[0];
-  return num[0];
-}
+console.log(allNumberButton)
 
 const operator = ['+', '/', '*', "-", '.']
 

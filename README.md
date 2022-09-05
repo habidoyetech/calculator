@@ -1,5 +1,5 @@
 ## CALCULATOR
-> A calculator project built to understand  Javascript.
+> This is my very first project with Javascript. The Scope of the project is to understand the basics of Javascript.
 
 <img src="assets\screenshot3.png">
 
