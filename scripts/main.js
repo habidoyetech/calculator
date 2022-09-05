@@ -1,9 +1,12 @@
-const num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
+// GET ALL ELEMENT IN THE DISPLAY SECTION
 const disChar = document.querySelector('.characterdisplay');
-
 const disResult = document.querySelector('.resultdisplay');
+const firstNumber = document.getElementById('firstNumber')
+const secondNumber = document.getElementById('secondNumber')
+const operatorTyple = document.getElementById('secondNumber')
 
+let operatorclick = false;
+let operatorType = '';
 // const btnseven = document.querySelector('.seven');
 // btnseven.addEventListener('click', seven);
 
@@ -89,7 +92,21 @@ const allNumberButton = document.getElementsByClassName('operand')
 for (i=0; i<allNumberButton.length; i++) {
   allNumberButton[i].addEventListener('click', (e)=>{
     disChar.innerHTML += e.target.value
+    !operatorclick? firstNumber.innerHTML = e.target.value: secondNumber.innerHtmle.target.value
     return e.target.value
+  })
+}
+
+const allOperator = document.getElementsByClassName('operator')
+for (i=0; i<allOperator.length; i++) {
+  allOperator[i].addEventListener('click', (e) =>{
+    if (operatorclick) {
+
+    }
+    disChar.innerHTML += e.target.textContent
+    operatorType = e.target.value
+    !operatorclick? True:False
+    
   })
 }
 
@@ -97,119 +114,119 @@ console.log(allNumberButton)
 
 const operator = ['+', '/', '*', "-", '.']
 
-const btnmul = document.getElementById('mul');
-btnmul.addEventListener('click', mul)
+// const btnmul = document.getElementById('mul');
+// btnmul.addEventListener('click', mul)
 
-function mul () {
-  if (disResult.textContent !== ' ') {
-    let newCalc = disResult.textContent;
-    disChar.innerHTML = ' ';
-    disChar.innerHTML += newCalc + operator[2];
-    disResult.textContent = ' ';
+// function mul () {
+//   if (disResult.textContent !== ' ') {
+//     let newCalc = disResult.textContent;
+//     disChar.innerHTML = ' ';
+//     disChar.innerHTML += newCalc + operator[2];
+//     disResult.textContent = ' ';
     
-  }else {
-    disChar.innerHTML += operator[2];
-  }
+//   }else {
+//     disChar.innerHTML += operator[2];
+//   }
   
-}
+// }
 
-const btnadd = document.getElementById('add');
-btnadd.addEventListener('click', add);
+// const btnadd = document.getElementById('add');
+// btnadd.addEventListener('click', add);
 
-function add () {
-  if (disResult.textContent === ' ') {
-    disChar.innerHTML += operator [0];
-  } else {
-    let newCalc = disResult.textContent;
-    disChar.innerHTML = ' ';
-    disChar.innerHTML += newCalc + operator[0];
-    disResult.textContent = ' ';
-  }
+// function add () {
+//   if (disResult.textContent === ' ') {
+//     disChar.innerHTML += operator [0];
+//   } else {
+//     let newCalc = disResult.textContent;
+//     disChar.innerHTML = ' ';
+//     disChar.innerHTML += newCalc + operator[0];
+//     disResult.textContent = ' ';
+//   }
   
-}
+// }
 
-const btnsub = document.getElementById('sub');
-btnsub.addEventListener('click', sub);
+// const btnsub = document.getElementById('sub');
+// btnsub.addEventListener('click', sub);
 
-function sub () {
-  if (disResult.textContent !== ' ') {
-    const newCalc = disResult.textContent;
-    disChar.innerHTML = newCalc + operator[3];
-    disResult.textContent = ' ';
+// function sub () {
+//   if (disResult.textContent !== ' ') {
+//     const newCalc = disResult.textContent;
+//     disChar.innerHTML = newCalc + operator[3];
+//     disResult.textContent = ' ';
     
-  }else {
-    disChar.innerHTML += operator[3];
-  }
-}
+//   }else {
+//     disChar.innerHTML += operator[3];
+//   }
+// }
 
-const btndivision = document.getElementById('divi');
-btndivision.addEventListener('click', division);
+// const btndivision = document.getElementById('divi');
+// btndivision.addEventListener('click', division);
 
-function division () {
-  if (disResult.textContent !== ' ') {
-    let newCalc = disResult.textContent;
-    disChar.innerHTML = ' ';
-    disChar.innerHTML += newCalc + operator[1];
-    disResult.textContent = ' ';
+// function division () {
+//   if (disResult.textContent !== ' ') {
+//     let newCalc = disResult.textContent;
+//     disChar.innerHTML = ' ';
+//     disChar.innerHTML += newCalc + operator[1];
+//     disResult.textContent = ' ';
     
-  }else {
-    disChar.innerHTML += operator[1];
-  }
-};
+//   }else {
+//     disChar.innerHTML += operator[1];
+//   }
+// };
 
-const btnequal = document.querySelector('.equalto');
-btnequal.addEventListener('click', equalto)
-function equalto() {
-  let myResult = disChar.innerHTML.toString();
-  let newResult = eval(myResult);
-  let myNewResult = parseFloat(newResult.toFixed(4))
-  disResult.innerHTML = myNewResult;
-  console.log(myNewResult)
+// const btnequal = document.querySelector('.equalto');
+// btnequal.addEventListener('click', equalto)
+// function equalto() {
+//   let myResult = disChar.innerHTML.toString();
+//   let newResult = eval(myResult);
+//   let myNewResult = parseFloat(newResult.toFixed(4))
+//   disResult.innerHTML = myNewResult;
+//   console.log(myNewResult)
   
-}
+// }
 
-const btndot = document.querySelector('.dot');
-btndot.addEventListener('click', dot)
+// const btndot = document.querySelector('.dot');
+// btndot.addEventListener('click', dot)
 
-function dot() {
+// function dot() {
   
-  disChar.innerHTML += operator[4];
-}
+//   disChar.innerHTML += operator[4];
+// }
 
-const btnClear = document.querySelector('.clear')
-btnClear.addEventListener('click', function() {
-  disChar.innerHTML = ' ';
-  disResult.textContent = ' ';
-});
+// const btnClear = document.querySelector('.clear')
+// btnClear.addEventListener('click', function() {
+//   disChar.innerHTML = ' ';
+//   disResult.textContent = ' ';
+// });
 
-const btnpercent = document.getElementById('percent')
-btnpercent.addEventListener('click', percent)
+// const btnpercent = document.getElementById('percent')
+// btnpercent.addEventListener('click', percent)
 
-function percent() {
-  const perNum = disChar.innerHTML;
-  const intPerNum = parseInt(perNum);
-  let resultperNum = intPerNum/100;
+// function percent() {
+//   const perNum = disChar.innerHTML;
+//   const intPerNum = parseInt(perNum);
+//   let resultperNum = intPerNum/100;
   
-  disResult.textContent = resultperNum;
+//   disResult.textContent = resultperNum;
   
-};
+// };
 
-const btnneg = document.getElementById('sign')
-btnneg.addEventListener('click', negate)
+// const btnneg = document.getElementById('sign')
+// btnneg.addEventListener('click', negate)
 
-function negate() {
-  let numNeg = disChar.innerHTML.toString();
+// function negate() {
+//   let numNeg = disChar.innerHTML.toString();
   
-  if (numNeg.indexOf('-') === -1){
-    disChar.innerHTML = ' ';
-    disChar.textContent += operator[3] + numNeg
-    return
-  }else if(numNeg.indexOf('-') !== -1) {
-    disChar.innerHTML = ' ';
-    disChar.innerHTML = numNeg.slice(1);
-    return
-  }
-}
+//   if (numNeg.indexOf('-') === -1){
+//     disChar.innerHTML = ' ';
+//     disChar.textContent += operator[3] + numNeg
+//     return
+//   }else if(numNeg.indexOf('-') !== -1) {
+//     disChar.innerHTML = ' ';
+//     disChar.innerHTML = numNeg.slice(1);
+//     return
+//   }
+// }
 
 const btndel = document.getElementById('delete')
 btndel.addEventListener('click', del)
