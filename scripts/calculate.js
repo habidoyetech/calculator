@@ -16,8 +16,11 @@ export const calculate= function (firstNumber, secondNumber, operator) {
       result = divide(firstNumber, secondNumber)
       break;
     case 'subtract':
-      result = subtract(firstNumber, secondNumber) 
-
+      result = subtract(firstNumber, secondNumber)
+      break;
+    case 'percentage':
+      result = firstNumber/100
+      break;
   }
   return result
 }

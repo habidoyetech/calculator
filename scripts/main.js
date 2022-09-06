@@ -33,6 +33,18 @@ for (let i=0; i<allNumberButton.length; i++) {
 const allOperator = document.getElementsByClassName('operator')
 for (let i=0; i<allOperator.length; i++) {
   allOperator[i].addEventListener('click', (e) =>{
+    if(e.target.value === 'percentage') {
+      if(operatorType) {
+        return
+      }
+      operatorType = e.target.value
+      const result = calculate(parseFloat(firstNumber), undefined, operatorType)
+      disResult.innerHTML = result
+      disChar.innerHTML = result
+      firstNumber = result.toString()
+      operatorType = ''
+      return
+    }
     if (operatorclick) {
       if (secondNumber === '0') {
         return
