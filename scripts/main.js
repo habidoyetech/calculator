@@ -11,6 +11,7 @@ let operatorclick = false;
 let operatorType = '';
 let firstNumber = '0';
 let secondNumber ='0';
+let negate = false;
 
 // All NUMBER IN THE PROJECT
 const allNumberButton = document.getElementsByClassName('operand')
@@ -121,4 +122,26 @@ function del () {
     console.log(firstNumber)
   }
 }
+
+const addSubtractSign = document.getElementById('sign')
+addSubtractSign.addEventListener('click', ()=> {
+  if (!negate) {
+    if(!operatorclick) {
+      let newfirstnumber = '-' + firstNumber.substring(0)
+      firstNumber =''
+      firstNumber = newfirstnumber
+      disChar.innerHTML = newfirstnumber
+      negate =true
+      console.log(firstNumber)
+    } else {
+      return
+    }
+  } else {
+    let newfirstnumber = firstNumber.substring(1)
+    let newDisChar = disChar.innerHTML.substring(1)
+    firstNumber = newfirstnumber
+    disChar.innerHTML = newDisChar
+    negate = false
+  }
+})
 
