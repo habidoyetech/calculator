@@ -3,5 +3,22 @@
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.26.1",
     "htmlhint": "^0.15.2"
-  }
+  },
+  "name": "calculator",
+  "description": "> This is my very first project with Javascript. The Scope of the project is to understand the basics of Javascript.",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Habidoye97/calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Habidoye97/calculator/issues"
+  },
+  "homepage": "https://github.com/Habidoye97/calculator#readme"
 }

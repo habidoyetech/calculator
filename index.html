@@ -9,7 +9,8 @@
   <script src="https://kit.fontawesome.com/4c536a6bd5.js"
       crossorigin="anonymous"></script>
   <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
-  <script src="scripts\main.js" defer></script>
+  <script type="module" src="scripts\main.js" defer></script>
+  
   <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,7 +18,7 @@
     <section class="calc-container">
       <section id="display">
         <div class="characterdisplay"></div>
-        <div class="resultdisplay"></div>
+        <div class="resultdisplay" id="resultdisplay"></div>
         <div>
           <div class="firstNumber" id="firstNumber" style="display: none;"></div>
           <div class="seconNumber" id="secondNumber" style="display: none;"></div>
@@ -50,9 +51,9 @@
         </div>
         <div class="group fifth">
           <button type="button" id="zero" class="operand zero" value="0">0</button>
-          <button type="button" class="operand dot" value="dot">.</button>
+          <button type="button" class="operand dot" value=".">.</button>
           <button type="button" id="delete">DEL</button>
-          <button type="button" class="operator equalto" value="equalto">=</button>
+          <button type="button" class="equalto" value="equalto">=</button>
           
         </div>
       </section>
